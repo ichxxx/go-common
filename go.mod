@@ -1,4 +1,4 @@
-module common
+module github.com/ichxxx/go-common
 
 go 1.17
 
