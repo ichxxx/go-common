@@ -1,9 +1,9 @@
-package number
+package common
 
 import (
 	"github.com/spf13/cast"
 )
 
-func ToInt(i interface{}) int {
+func Int(i interface{}) int {
 	return cast.ToInt(i)
 }

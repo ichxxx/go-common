@@ -1,15 +1,14 @@
-package crypto
+package common
 
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"strings"
 )
 
-func MD5(s ...string) string {
+func MD5(s string) string {
 	if len(s) == 0 {
 		return ""
 	}
-	md5Hex := md5.Sum([]byte(strings.Join(s, "")))
+	md5Hex := md5.Sum(UnsafeBytes(s))
 	return hex.EncodeToString(md5Hex[:])
 }
